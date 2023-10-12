@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Enviado com sucesso</title>
+</head>
+<style>
+    body{
+    background-image: url("img/florkk.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+
+.glow-on-hover {
+ position: absolute; /* Posição absoluta para que o botão fique sobreposta ao conteúdo */
+ top: 20%; /* Move o topo do botão para o centro vertical */
+ left: 50%; /* Move a esquerda do botão para o centro horizontal */
+ transform: translate(-50%, -50%); /* Centraliza o botão completamente */
+ background-color: #000; /* Cor de fundo do botão */
+ color: #fff; /* Cor do texto do botão */
+ padding: 30px 30px; /* Espaçamento interno do botão */
+ border: 1; /* Remove a borda do botão */
+ cursor: pointer;
+}
+
+button.glow-on-hover:hover {
+ box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Adiciona um efeito de brilho quando o mouse passa sobre o botão */
+}
+
+.glow-on-hover:before {
+ content: '';
+ background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+ position: absolute;
+ top: -2px;
+ left:-2px;
+ background-size: 400%;
+ z-index: -1;
+ filter: blur(5px);
+ width: calc(100% + 4px);
+ height: calc(100% + 4px);
+ animation: glowing 20s linear infinite;
+ opacity: 0;
+ transition: opacity .3s ease-in-out;
+ border-radius: 10px;
+}
+
+.glow-on-hover:active {
+ color: #000
+}
+
+.glow-on-hover:active:after {
+ background: transparent;
+}
+
+.glow-on-hover:hover:before {
+ opacity: 1;
+}
+
+.glow-on-hover:after {
+ z-index: -1;
+ content: '';
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background: #111;
+ left: 0;
+ top: 0;
+ border-radius: 10px;
+}
+
+@keyframes glowing {
+ 0% { background-position: 0 0; }
+ 50% { background-position: 400% 0; }
+ 100% { background-position: 0 0; }
+}
+</style>
+
+<a class="glow-on-hover" href="https://pesquisaanatel.netlify.app/">UFFA! ENVIADO, CLIQUE AQUI PARA RETORNAR.</a>
+
+
+</html>

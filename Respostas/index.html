@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respostas Pré-Montadas</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f2f2f2;
+      }
+      header {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 10px;
+      }
+      h1 {
+          margin: 0;
+      }
+      .container {
+          max-width: 600px;
+          margin: 20px auto;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      label {
+          font-weight: bold;
+      }
+      select {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+      }
+      button {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    color: #fff;
+    border: none;
+    padding: 7px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      button:hover {
+        background: linear-gradient(to bottom, #2980b9, #1c668a);
+      }
+      #resposta {
+          
+     width: 100%; /* Largura de 100% do contêiner pai */
+    min-height: 150px; /* Altura mínima inicial */
+    resize: both; /* Permite redimensionar verticalmente */
+}
+      header {
+    background-color: #333;
+    color: #fff;
+    padding: 0px;
+    text-align: center;
+  }
+  .logo {
+    display: inline-block;
+    max-width: 80px;
+    height: auto;
+    margin: 10px;
+    text-align: relative;
+  }
+  nav {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  
+
+  .botaotimx {
+    background: linear-gradient(to bottom, #0074d9, #0056b3); /* Gradiente de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 7px 10px; /* Espaçamento interno do botão */
+    text-align: center; /* Centraliza o texto no botão */
+    text-decoration: none; /* Remove sublinhado do link */
+    display: inline-block;
+    font-size: 18px; /* Tamanho da fonte do texto do botão */
+    font-weight: bold; /* Deixa o texto em negrito */
+    border-radius: 6px; /* Arredonda as bordas do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse sobre o botão */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave na cor de fundo e texto */
+
+    /* Sombra no botão para dar profundidade */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botaotimx:hover {
+    background: linear-gradient(to bottom, #0056b3, #003a7d); /* Gradiente de fundo ao passar o mouse */
+}
+footer {
+    background: #333;
+    width: 100%;
+    height: 50px; /* Altura fixa para o footer */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Apoio Anatel</h1>
+        <img class="logo" src="img/timlogo.png" alt="Logo Tim">
+        <img class="logo" src="img/anatell.png" alt="Logo Anatel">
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="https://calculadoraanatel.netlify.app/" target="_blank">Calculadora</a></li>
+          <li><a href="https://pesquisaanatel.netlify.app/" target="_blank">Controle pesquisa</a></li>
+          <li><a href="https://apoioanatel.netlify.app/" target="_blank">Inicio</a></li>
+          <li><a href="https://linksanatel.netlify.app/" target="_blank">Links</a></li>
+          <li><a href="https://respostasanatel.netlify.app/" target="_blank">Respostas</a></li>  
+          
+        </ul>
+      </nav>
+      
+      <div class="container">
+        <label for="tema">Escolha um tema:</label>
+        <select id="tema">
+              <option value="ouvidoria">Protocolo Ouvidoria?</option>
+              <option value="tentativa">Tentativa de contato</option>
+              <option value="normalizado">Normalizado após Reparo</option>
+              <option value="areaderisco">Area de Risco</option>
+              <option value="massiva">Massiva</option>
+              <option value="cancelamento">Cancelamento/Massiva</option>
+              <option value="trocadeplano">Troca de Plano</option>
+              <option value="instalação">Instalação</option>
+              <option value="viabilidade">Viabilidade e Cobertura</option>
+              <option value="vas">HBO/Paramount/etc..</option>
+              <option value="meutim">Meu TIM</option>
+              <option value="atc">Abertura de ATC</option>
+              <option value="reclassificação">Reclassificação</option>
+              <option value="fechamento">Fechamento do siebel</option>
+              <option value="Inadinplencia">Inadimplência</option>
+              <option value="ligacoes">Ligações Inoportunas</option>
+              <option value="fraude">Antifraude</option>
+          </select>
+
+          <div id="botoesOpcoes"></div> <!-- Esta div será usada para adicionar os botões -->
+      
+          <button onclick="obterResposta()">NOTAS</button>
+          
+          <br><br><br>
+          
+          <textarea id="resposta" rows="15" cols="50"></textarea>
+          
+          <br><br><br>
+          
+          <li>
+            <a id="linkTimX" href="" target="_blank">
+              <button class="botaotimx">Tim X</button>
+          </a>
+          
+        </li>
+    </div>
+
+       
+        
+    </div>
+    
+
+    <script>
+           const respostas = {
+            'ouvidoria': `
+ Se sim:
+ 
+ Identificamos protocolo XXXXXXXXXXXX da Ouvidoria sobre o motivo xxxxxx, registrado em xx/xx/xxxx. 
+ 
+ 
+ Se não: 
+ 
+ Identificamos que não existe protocolo de ouvidoria, apenas protocolo de 1º Nível XXXXX, sobre XXXX, registrado em XX/XX/XXXX.  
+ 
+ Se não houver nenhum Protocolo, tb informar: 
+ 
+ Identificamos que não houve acionamento do consumidor nos canais de atendimento da Ouvidoria e 1° atendimento referente ao motivo falha banda larga. 
+    `,
+            'tentativa': `
+Protocolo Anatel: XXXXXXXXXXXXXXX
+
+Contato com sucesso: 1ª Tentativa no dia xx/xx/xxxx às xx:xx no telefone: XXXXXXXXXXX,
+
+Tratativa inicial ou FUP: 
+
+E-mail enviado: () Sim () Não
+
+WhatsApp: () Sim  () Não
+    `,
+        'normalizado': `
+Olá, 
+a TIM Ultra Fibra gostaria de agradecer a oportunidade que você nos dá de esclarecermos e solucionarmos o ocorrido da melhor maneira possível.
+
+Identificamos o protocolo XXXXXXX da Ouvidoria sobre a indisponibilidade do serviço, registrado em XX/XX/XXXX. Em decorrência das informações citadas na sua reclamação no Anatel Consumidor, registrada por meio do protocolo nº XXXXXXXXXXXXXXX, considerada procedente, onde foi relatada insatisfação na qualidade e funcionamento de sua banda larga.
+
+Após análise de seu plano TIM Live 200 Mega Power Fid ativo em sistema sob o acesso XXXXXX, onde após os testes de velocidade constatamos que a conexão está dentro dos padrões de qualidade esperado, sendo fornecida a velocidade contratada.
+
+Ressaltamos que foi identificada a necessidade de uma visita técnica que foi realizada em XX/XX/XXXX, onde as falhas foram corrigidas pela equipe de campo. Em caráter de bom relacionamento e devido aos transtornos causados referentes à falta de funcionamento do seu plano ou à má qualidade do mesmo, lançamos crédito no valor de R$ XX,XX que constará na fatura de vencimento em XX/XX/XXXX. Esse cálculo se refere ao proporcional de X dias entre o período XX/XX/XXXX a XX/XX/XXXX.
+
+Contudo, pedimos desculpas pelo ocorrido, pois sabemos que houve um descontentamento e insatisfação no período de indisponibilidade do serviço. Nosso desejo é sempre prestar um serviço de qualidade que atenda às suas expectativas.
+
+Realizamos contato com sucesso com XXXXXXX no número XXXXXXXX em 08/01/2023 às xxxx e registramos as informações sob protocolo: XXXXXXXXXXXX. Antes de finalizar/avaliar nossa resposta, caso tenha dúvidas sobre o tratamento de sua demanda, pedimos que faça uma interação através do e-mail atendimentotecnicotimlive@timbrasil.com.br com seu CPF, que faremos um novo contato para sanar todas as dúvidas.
+
+Caso queira consultar o regulamento do seu plano, acesse o site da TIM (https://site.tim.com.br).
+
+Aproveitamos a oportunidade para informar que a TIM criou um canal de Ouvidoria, específico para atendimento em 2ª instância para prestar assistência a clientes que não tiveram sua solicitação atendida em nossos canais de atendimento. O canal está disponível de segunda a sexta-feira das 08:00 às 18:00 horas (Exceto feriados nacionais) através do número 08008820041.
+
+Agradeço a oportunidade de esclarecer os fatos relatados e me coloco à disposição.
+    `,
+    
+
+            
+            'areaderisco': `
+
+Olá,  
+A TIM Ultrafibra gostaria de agradecer a oportunidade que você nos dá de esclarecermos e solucionarmos o ocorrido da melhor maneira possível.    
+
+Identificamos que não existe protocolo de ouvidoria, apenas protocolo de 1º Nível xxxxxx, sobre pedido de cancelamento registrado em xx/xx/xx.    
+
+Em decorrência das informações citadas na sua reclamação no Anatel Consumidor, registrada por meio do protocolo nº 202212205645546. Onde foi relatado sua insatisfação com indisponibilidade do serviço/área de risco.
+
+Realizamos a análise da sua TIM Fibra ativo no plano TIM Live 200 Mega Power Fid de acesso XXXXXXXX, onde após os testes de velocidade constatamos que o seu produto não está funcionando dentro dos padrões de qualidade esperado.  
+
+Agora, apenas para que você entenda, existe uma manutenção aberto, mas devido a restrição de segurança pública nossos técnicos não estão conseguindo acesso ao local para reparo por questões de segurança, o local não se trata de sua residência, também pode ser onde a caixa que distribui internet para o seu modem está localizada e ou a(s) rua(s) por onde passam os fios até chegar no poste mais próximo. Nesta situação, não temos previsão para realizar o reparo, porém, estamos trabalhando para resolver a questão junto aos órgãos competentes.  
+
+Referente ao período de indisponibilidade (de xx/xx/xxxx a xx/xx/xxxx, xxx dias) e por não haver previsão e aos transtornos causados, lançamos crédito no valor de R$ xxx,xx para a fatura com vencimento xx/xx/xxxx, portanto valor será x,xx.
+
+Realizamos contato com sucesso com XXXXXXX no número XXXXXXXX em xx/xx/xxxx às xxxx e registramos as informações sob protocolo: xxxxxxx.
+
+Antes de finalizar/avaliar nossa resposta, caso tenha dúvidas sobre o tratamento de sua demanda, pedimos que faça uma interação através do e-mail atendimentotecnicotimlive@timbrasil.com.br com seu CPF, que faremos um novo contato para sanar todas as dúvidas.    
+
+Caso queira consultar o regulamento do seu plano, acesse o site da TIM (https://www.tim.com.br/rj/para-voce/internet/internet-para-casa/tim-ultrafibra).      
+
+Aproveitamos a oportunidade para informar que a TIM criou um canal de Ouvidoria, específico para atendimento em 2ª instância para prestar assistência a clientes que não tiveram sua solicitação atendida em nossos canais de atendimento. O canal está disponível de segunda a sexta-feira das 08:00 às 18:00 horas (Exceto feriados nacionais) através do número 08008820041.    
+
+Sua tratativa foi registrada em nosso sistema com o protocolo xxxxxx.    
+
+Agradeço a oportunidade de esclarecer os fatos relatados e me coloco à disposição.
+   `,
+    
+           'massiva': `
+Olá,    
+A TIM Fibra gostaria de agradecer a oportunidade que você nos dá de esclarecermos e solucionarmos o ocorrido da melhor maneira possível.  
+
+Identificamos que não existe protocolo de ouvidoria, apenas protocolo de 1º Nível XXXXX, sobre queda de conexão, registrado em xx/xx/xxxx.  
+
+Em decorrência das informações citadas na sua reclamação no Anatel Consumidor, registrada por meio do protocolo nº xxxxxxxxxxx considerada procedente, sobre manutenção de rede/ queda de conexão, referente ao plano TIM Live 150 Mega Power Fid de acesso 186520203 que está ativo. Verificamos que no momento o serviço encontra-se normalizados, sem falhas ou bloqueios que impeçam seu funcionamento, sendo fornecida a velocidade contratada.    
+
+Agora, apenas para que você entenda o que aconteceu, ocorreu uma manutenção de rede em sua região entre os dias 06/03/2023 e 11/03/2023 o que causou a indisponibilidade do serviço nesse período.  
+
+Em caráter informativo, todas as falhas supracitadas se referem à massivas de rede as quais são ocasionadas muitas vezes por fatores externos como condições climáticas, cabos rompidos ou furto, sobrecarga, entre outros que pode atingir a região. Desta forma, o reparo é realizado após identificarmos a queda, sendo que em sua grande maioria, não existe a necessidade de visita residencial apenas a liberação automática após reparo na sua grande maioria.
+
+Referente ao período de indisponibilidade (de xx/xx/xxxx a xx/xx/xxxx, x dias), lançamos crédito no valor de R$xx.xx que constará na fatura com vencimento xx/xx/xxxx.  
+
+Contudo pedimos desculpas pelo ocorrido, pois sabemos que houve um descontentamento e insatisfação no período de indisponibilidade do serviço. Nosso desejo é sempre prestar um serviço de qualidade que atenda às suas expectativas.    
+
+Realizamos contato com sucesso no número xxxxxxxxx em xx/xx/xxxx às xx:xx e registramos as informações sob protocolo: xxxxxxxxxxxxxx.
+
+Antes de finalizar/avaliar nossa resposta, caso tenha dúvidas sobre o tratamento de sua demanda, pedimos que faça uma interação através do e-mail atendimentotecnicotimlive@timbrasil.com.br com seu CPF, que faremos um novo contato para sanar todas as dúvidas.    
+
+Caso queira consultar o regulamento do seu plano, acesse o site da TIM (https://site.tim.com.br).
+
+Aproveitamos a oportunidade para informar que a TIM criou um canal de Ouvidoria, específico para atendimento em 2ª instância para prestar assistência a clientes que não tiveram sua solicitação atendida em nossos canais de atendimento. O canal está disponível de segunda a sexta-feira das 08:00 às 18:00 horas (Exceto feriados nacionais) através do número 08008820041.    
+
+Sua tratativa foi registrada em nosso sistema com o protocolo xxxxxxxxxxx.
+
+Agradeço a oportunidade de esclarecer os fatos relatados e me coloco à disposição.
+    `,
+    'cancelamento': `
+Olá,   
+A TIM ULTRAFIBRA gostaria de agradecer a oportunidade que você nos dá de esclarecermos e solucionarmos o ocorrido da melhor maneira possível.  
+
+Identificamos que não existe protocolo de ouvidoria, apenas protocolo de 1º Nível xxxxxxxxxx sobre pedido de cancelamento, registrado em xx/xx/xxxx.  
+
+Em decorrência das informações citadas na sua reclamação no Anatel Consumidor, registrada por meio do protocolo nº xxxxxxxxx, considerada procedente referente ao pedido de cancelamento do acesso xxxx ativo desde xx/xx/xxxx no plano TIM 60 Mega Power Fid 2-0.
+
+Conforme contato no dia xx/xx/xxxx através do telefone xxxxxxxxxxxx, prosseguimos com o cancelamento do acesso conforme solicitação do cliente, devido a indisponibilidade do serviço por uma falha de rede em aberto a mais de xx dias sem previsão de reparo, devido a questão de segurança pública.
+
+Ressaltamos que o cancelamento não gera cobrança adicional em relação multa contratual, pois o acesso não estava em período de fidelidade. A fatura vencimento xx/xx/xxxx em aberto no valor de R$xxx,xx foi contestada integralmente, portando desconsidere para pagamento.  
+
+Agendamos a retirada do modem para o dia xx/xx/xxxx no turno da tarde, caso não seja possível a retirada nessa data, nosso setor responsável irá entra em contato no prazo de até 10 dias para reagendar a melhor data e local para o cliente. Caso o equipamento tenha sido retirado, desconsidere esta informação.    
+
+Lamentamos o ocorrido, pois nosso desejo é sempre prestar um serviço de qualidade que atenda às suas expectativas. 
+
+Consulte nosso regulamento de oferta, através do site da TIM (www.tim.com.br) e verifique todas as condições sobre planos em: Planos e Serviços - Internet para Casa - TIM live UltraFibra - Mais informações sobre o plano > Regulamentos, sumários e contratos.    
+
+Aproveitamos a oportunidade para informar que a TIM criou um canal de Ouvidoria, específico para atendimento em 2ª instância para prestar assistência a clientes que não tiveram sua solicitação atendida em nossos canais de atendimento. O canal está disponível de segunda a sexta-feira das 08:00 às 18:00 horas (Exceto feriados nacionais) através do número 08008820041.  
+
+Peço a gentileza que avalie o meu atendimento telefônico no mesmo canal que abriu sua reclamação Anatel, podendo me avaliar com nota de 1 a 5 , desde já agradeço!  
+
+Antes de finalizar/avaliar nossa resposta, caso tenha dúvidas sobre o tratamento de sua demanda, pedimos que faça uma interação através do e-mail atendimentotecnicotimlive@timbrasil.com.br com seu CPF, que faremos um novo contato para sanar todas as dúvidas.    
+
+Sua tratativa foi registrada em nosso sistema com o protocolo xxxxxxxxxx.    
+
+Agradeço a oportunidade de esclarecer os fatos relatados e me coloco à disposição. 
+    `,
+
+    'trocadeplano': `
+Olá,  
+A TIM ULTRAFIBRA gostaria de agradecer a oportunidade que você nos dá de esclarecermos e solucionarmos o ocorrido da melhor maneira possível.    
+
+Identificamos que não houve acionamento do consumidor nos canais de atendimento, tanto 1º Nível quanto Ouvidoria.
+
+Em decorrência das informações citadas na sua reclamação no Anatel Consumidor, registrada por meio do protocolo nº xxxxxxx, considerada procedente, em relação a alteração do plano/oferta atual.  
+
+Após análise da sua TIM LIVE de acesso xxxxx ativo no desde xx/xx/xxxx no plano TIM Live 200 Mega Power Fid. Conforme contato no dia xx/xx/xxxx através do telefone xxxxxx, acordamos a troca de seu plano para o TIM Fibra 500M 2022 no valor de R$xx,xx por xx meses. Concluímos a alteração sob a ordem 1-xxxx em xx/xx/xxxx e a nova velocidade já está disponível para utilização.  
+
+Ressaltamos que a próxima fatura vencimento xx/xx/xxxx ainda será referente ao plano anterior de acordo com ciclo de faturamento.  
+
+Peço a gentileza que avalie o meu atendimento telefônico no mesmo canal que abriu sua reclamação Anatel, podendo me avaliar com nota de 1 a 5 , desde já agradeço!
+
+Antes de finalizar/avaliar nossa resposta, caso tenha dúvidas sobre o tratamento de sua demanda, pedimos que faça uma interação através do e-mail atendimentotecnicotimlive@timbrasil.com.br com seu CPF, que faremos um novo contato para sanar todas as dúvidas.    
+
+Caso queira consultar o regulamento do seu plano, acesse o site da TIM (https://site.tim.com.br).      
+
+Aproveitamos a oportunidade para informar que a TIM criou um canal de Ouvidoria, específico para atendimento em 2ª instância para prestar assistência a clientes que não tiveram sua solicitação atendida em nossos canais de atendimento. O canal está disponível de segunda a sexta-feira das 08:00 às 18:00 horas (Exceto feriados nacionais) através do número 08008820041.    
+
+Agradeço a oportunidade de esclarecer os fatos relatados e me coloco à disposição.
+    `,
+    'instalação': `
+Olá,  
+A Tim Ultrafibra gostaria de agradecer a oportunidade que você nos dá de esclarecermos e solucionarmos o ocorrido da melhor maneira possível.      
+
+Identificamos que não existe protocolo de ouvidoria, apenas protocolo de 1º Nível xxxxxxxx, sobre instalação, registrado em xx/xx/xxxx.  
+
+Em decorrência das informações citadas na sua reclamação no Anatel Consumidor, registrada por meio do protocolo nº xxxxxxxxx. Onde foi relatado sua insatisfação em relação a instalação não realizada dentro do prazo.  
+
+Após análise do pedido referente ao plano xxxxxxx de acesso xxxxxxx, identificamos que a instalação foi realizada no dia xx/xx/xxxx, no momento seus serviços encontram-se ativos, sem falhas ou bloqueios que impeçam seu funcionamento.  
+
+Realizamos contato com sucesso com xxxxxx no número xxxxxxxx em xx/xx/xxxx às xx:xx e registramos as informações sob protocolo: xxxxxxxx..
+
+Lamentamos o ocorrido, pois nosso desejo é sempre prestar um serviço de qualidade que atenda às suas expectativas.  
+
+Antes de finalizar/avaliar nossa resposta, caso tenha dúvidas sobre o tratamento de sua demanda, pedimos que faça uma interação através do e-mail atendimentotecnicotimlive@timbrasil.com.br com seu CPF, que faremos um novo contato para sanar todas as dúvidas.      
+
+Caso queira consultar o regulamento do seu plano, acesse o site da TIM (https://site.tim.com.br).      
+
+Aproveitamos a oportunidade para informar que a TIM criou um canal de Ouvidoria, específico para atendimento em 2ª instância para prestar assistência a clientes que não tiveram sua solicitação atendida em nossos canais de atendimento. O canal está disponível de segunda a sexta-feira das 08:00 às 18:00 horas (Exceto feriados nacionais) através do número 08008820041.        
+
+Agradeço a oportunidade de esclarecer os fatos relatados e me coloco à disposição. 
+    `,
+    'viabilidade': `
+Olá,  
+
+A TIM Live gostaria de agradecer a oportunidade que você nos dá de esclarecermos e solucionarmos o ocorrido da melhor maneira possível.    
+
+Identificamos protocolo xxxxxxx da Ouvidoria sobre indisponibilidade do serviço, registrado em xx/xx/xxxx.    
+
+Em decorrência das informações citadas na sua reclamação no Anatel Consumidor, registrada por meio do protocolo nº xxxxxxx, considerada procedente em relação ao pedido de instalação. Após análise, identificamos que o seu endereço xxxxxxxx, Brasil, não há viabilidade no momento para instalação da Tim Live Ultra Fibra, conforme tela comprobatória em anexo.  
+
+Ressaltamos que não possuir viabilidade técnica para ativação de uma oferta que a empresa possui em outras regiões não caracteriza esta oferta como “propaganda enganosa”, todas as nossas ofertas possuem a informação de “Sujeito a análise de cobertura/viabilidade” e “Sujeito a análise de crédito” assim como existe na regulamentação da ANATEL que respalda a recusa de instalação do serviço em caso de inviabilidade técnica e isso ocorre devido a própria característica do serviço.
+
+Pedimos desculpas pelo ocorrido e ressaltamos que fizemos todo o possível para concluir o seu pedido, mas neste momento não será possível e sua ordem (x-xxxxxxxxx) de instalação foi cancelada sem gerar nenhum tipo de custo ou cobrança.  
+
+Agora, apenas para que você entenda, não tendo viabilidade técnica para seu endereço, foi efetuado o cancelamento da solicitação de contratação, sem ônus ou qualquer cobrança.  
+
+Realizamos contato com sucesso com Sergio através do telefone xxxxxxx em xx/xx/xxxx às xx:xx e registramos as informações sob protocolo: xxxxxxxx.    
+
+Consulte nosso regulamento de oferta, através do site da TIM (www.tim.com.br) e verifique todas as condições sobre planos em: Planos e Serviços - Internet para Casa - TIM live UltraFibra - Mais informações sobre o plano > Regulamentos, sumários e contratos.    
+
+Aproveitamos a oportunidade para informar que a TIM criou um canal de Ouvidoria, específico para atendimento em 2ª instância para prestar assistência a clientes que não tiveram sua solicitação atendida em nossos canais de atendimento. O canal está disponível de segunda a sexta-feira das 08:00 às 18:00 horas (Exceto feriados nacionais) através do número 08008820041.  
+
+Antes de finalizar/avaliar nossa resposta, caso tenha dúvidas sobre o tratamento de sua demanda, pedimos que faça uma interação através do e-mail atendimentotecnicotimlive@timbrasil.com.br com seu CPF, que faremos um novo contato para sanar todas as dúvidas.  
+
+Sua tratativa foi registrada em nosso sistema com o protocolo xxxxxxxx.  
+
+Agradeço a oportunidade de esclarecer os fatos relatados e me coloco à disposição.
+    `,
+    'vas': `
+Olá,  
+A TIM Ultrafibra gostaria de agradecer a oportunidade que você nos dá de esclarecermos e solucionarmos o ocorrido da melhor maneira possível.    
+
+Identificamos que não houve acionamento do consumidor nos canais de atendimento, tanto 1º Nível quanto Ouvidoria.  
+
+Em decorrência das informações citadas na sua reclamação no Anatel Consumidor, registrada por meio do protocolo nº xxxxxxxxx, considerada procedente, sobre falha ao acessar HBO MAX/Serviços inclusos no plano.  
+
+Após análise da sua TIM ULTRAFIBRA ativo no plano TIM Fibra 500M Premium 2022 de acesso xxxxxxx ativo desde xx/xx/xxxx, identificamos uma falha sistêmica que está impossibilitando o acesso ao HBO incluso em sua oferta atual.  
+
+Conforme contato no dia xx/xx/xxxx através do telefone xxxxxxxx, onde após testes ao acessar o HBO através dos dados (login/senha) do MEU TIM ainda apresenta falha, direcionamos para as devidas correções junto a nossa área especializada. O prazo é de até 72 horas para que seja solucionado e disponibilizar o acesso.  
+
+Em caráter de bom relacionamento e devido aos transtornos recorrentes causados referentes a essa falha e não conseguir utilizar os benefícios do plano, lançamos crédito no valor de R$xx,xx que constará na fatura vencimento xx/xx/xxxx.  
+
+Lamentamos o ocorrido, pois nosso desejo é sempre prestar um serviço de qualidade que atenda às suas expectativas.  
+
+Antes de finalizar/avaliar nossa resposta, caso tenha dúvidas sobre o tratamento de sua demanda, pedimos que faça uma interação através do e-mail atendimentotecnicotimlive@timbrasil.com.br com seu CPF, que faremos um novo contato para sanar todas as dúvidas.    
+
+Caso queira consultar o regulamento do seu plano, acesse o site da TIM (https://site.tim.com.br).      
+
+Aproveitamos a oportunidade para informar que a TIM criou um canal de Ouvidoria, específico para atendimento em 2ª instância para prestar assistência a clientes que não tiveram sua solicitação atendida em nossos canais de atendimento. O canal está disponível de segunda a sexta-feira das 08:00 às 18:00 horas (Exceto feriados nacionais) através do número 08008820041.  
+
+Sua tratativa foi registrada em nosso sistema com o protocolo xxxxxxxxx.    
+
+Agradeço a oportunidade de esclarecer os fatos relatados e me coloco à disposição.
+    `,
+    'meutim': `
+Olá,  
+A TIM Live gostaria de agradecer a oportunidade que você nos dá de esclarecermos e solucionarmos o ocorrido da melhor maneira possível.    
+
+Identificamos que não existe protocolo de ouvidoria, apenas protocolo de 1º Nível xxxxxxxxx, sobre falha do acesso ao MEU TIM, registrado em xx/xx/xxxx.    
+
+Em decorrência das informações citadas na sua reclamação no Anatel Consumidor, registrada por meio do protocolo nº xxxxxxxx, considerada procedente, sobre falha ao acessar MEU TIM/Serviços inclusos no plano.  
+
+Após análise da sua TIM ULTRAFIBRA ativo no plano TIM Fibra 500M Premium 2022 de acesso xxxxxx ativo desde xx/xx/xxxx, identificamos uma falha sistêmica que está impossibilitando o cadastro através do MEU TIM.
+
+Ressaltamos que foi direcionado para nossa equipe de T.I realizar as devidas correções, e assim que for corrigido faremos contato para novos testes no acesso.  
+
+Em caráter de bom relacionamento e devido aos transtornos recorrentes causados referentes a essa falha e não conseguir utilizar os benefícios do plano, contestamos a fatura vencimento xx/xx/xxxx em aberto no valor de R$xxx,xx caso tenha realizado o pagamento, será lançado como crédito automaticamente para o próximo vencimento.    
+
+Contudo pedimos desculpas pelo ocorrido, pois sabemos que houve um descontentamento e insatisfação no período de indisponibilidade do serviço. Nosso desejo é sempre prestar um serviço de qualidade que atenda às suas expectativas.  
+
+Antes de finalizar/avaliar nossa resposta, caso tenha dúvidas sobre o tratamento de sua demanda, pedimos que faça uma interação através do e-mail atendimentotecnicotimlive@timbrasil.com.br com seu CPF, que faremos um novo contato para sanar todas as dúvidas.    
+
+Caso queira consultar o regulamento do seu plano, acesse o site da TIM (https://site.tim.com.br).      
+
+Aproveitamos a oportunidade para informar que a TIM criou um canal de Ouvidoria, específico para atendimento em 2ª instância para prestar assistência a clientes que não tiveram sua solicitação atendida em nossos canais de atendimento. O canal está disponível de segunda a sexta-feira das 08:00 às 18:00 horas (Exceto feriados nacionais) através do número 08008820041.    
+
+Agradeço a oportunidade de esclarecer os fatos relatados e me coloco à disposição.
+    `,
+    'atc': `
+PRIORIDADE ANATEL: 
+
+Protocolo: 
+Service ID: 
+Telefone de contato 1: 
+Telefone de contato 2: 
+
+Falha relatada pelo cliente: 
+
+
+Atenciosamente,
+    `,
+    'reclassificação': `
+Solicito a Reclassificação da solicitação nº 202308304394933 de Serviço Banda larga Fixa TIM Ultrafibra para Pré Pago em conformidade com o problema relatado pelo consumidor
+
+Solicito o cancelamento da ID nº 202308194991617 registrada na data 19/08/2023 por duplicidade com a solicitação n° 202308194963166 em aberto registrada na data 19/08/2023 
+    `,
+    'fechamento': `
+Registro Anatel: 
+
+Reclamação detalhada do cliente:   
+
+Tratativa detalhada da correção:   
+
+Reclamação: (x) Procedente  () Improcedente   
+
+Problema solucionado: (x) Sim  () Não   
+
+Retorno para o cliente:   
+
+(x) Com contato - Número de contato: xxx - Atendido por: (nome de quem atendeu a ligação)   
+
+() Sem contato - Motivo 
+    `,
+    'Inadinplencia': `
+Bloqueio parcial:
+
+Não encontramos um protocolo de ouvidoria recente, mas identificamos o último acionamento de 1º Nível (Front e Web/URA) referente a esse motivo, sob o protocolo xxxxx, na data xxx
+
+xxxxx,
+Sobre a sua reclamação de problemas com a banda larga fixa, de caráter improcedente:
+
+1. Fizemos a análise do produto de banda larga fixa e verificamos que havia um bloqueio parcial ativado em xxxx porque a fatura de vencimento em junho (12/06) ficou em atraso por mais de 20 dias. A data de notificação de débito em nossos sistemas consta a partir de 17/06.
+
+2. Você efetuou o pagamento da fatura de junho no dia xxxxx e o desbloqueio da banda larga foi concluído com sucesso no dia xxxx. Desde então, a sua conexão está normal em nossos sistemas. Reforçamos que o bloqueio parcial acontecerá sempre que uma fatura ficar em atraso por mais de 20 dias. As restrições que podem ser aplicadas à banda larga em caso de inadimplência estão descritas na cláusula nona do Contrato de Prestação de Serviços. Você pode consultar o regulamento do seu plano e o contrato de prestação de serviços ao acessar o site www.tim.com.br.
+
+
+O número do protocolo deste registro é: xxxxx.
+Em caso de dúvidas, nos colocamos à disposição através do atendimentotecnicotimlive@timbrasil.com.br e também na nossa Ouvidoria 0800 882 0041 (de segunda à sexta das 08h às 18h).  
+
+Realizamos contato com sucesso no número xxxx no dia xxx , às xxxx via telefone e WhatsApp, sem sucesso. 
+
+
+
+
+Suspensão total:
+
+Não identificamos acionamentos recentes do consumidor nos canais de atendimento (1º Nível e Ouvidoria) referente e este problema.
+
+xxxxxx,
+Sobre a sua reclamação de problemas com a banda larga fixa, de caráter improcedente:
+
+1. Fizemos a análise do produto de banda larga fixa e identificamos que seu produto TIM Fibra 300M 2022 está agora suspenso desde o dia xxxxx porque as faturas de vencimento em maio (12/05/23) está em atraso há 69 dias e a de junho (12/06/23) há 38 dias. A notificação de débito inicial ocorreu a partir de 17/05.
+
+2. Conforme tratativas anteriores, já foi feito o desbloqueio do serviço de banda larga por intermédio do religa em confiança, em que o seu produto ficou desbloqueado durante o período de 09/06 a 18/06 enquanto aguardávamos o pagamento das faturas. Como o pagamento não foi feito até então, o novo bloqueio parcial ocorreu em 19/06 e, agora, ocorreu a suspensão total do produto. Explicamos que para normalizar a internet é necessário que as faturas sejam pagas ou negociadas.
+
+3. Caso queira, você também pode efetuar o parcelamento das faturas no site TIM Negocia www.timnegocia.com.br ou da central de cobrança 0800 888 2373
+
+4. As restrições que podem ser aplicadas à banda larga em caso de inadimplência estão descritas na cláusula nona do Contrato de Prestação de Serviços. Você pode consultar o regulamento do seu plano e o contrato de prestação de serviços ao acessar o site www.tim.com.br.
+
+
+O número do protocolo deste registro é: xxxx.
+Em caso de dúvidas, nos colocamos à disposição em caso de novas solicitações através do atendimentotecnicotimlive@timbrasil.com.br e também na nossa Ouvidoria 0800 882 0041 (de segunda à sexta das 08h às 18h).  
+
+Realizamos contato com sucesso no número xxx  em xxxx, às xxxx, via WhatsApp. 
+
+
+
+
+Cancelamento:
+
+
+Não identificamos acionamentos recentes do consumidor nos canais de atendimento (1º Nível e Ouvidoria) referente e este problema.
+
+xxxxx,
+Sobre a sua reclamação de problemas com a banda larga fixa, de caráter improcedente:
+
+1. Fizemos a análise do produto de banda larga fixa, mas verificamos que o seu plano TIM Live 200 Mega Power já foi cancelado automaticamente pelos nossos sistemas no dia xxxxxx, através da ordem sistêmica xxxxxxx, por inadimplência. Infelizmente isto ocorreu porque a fatura há mais tempo em atraso, a de setembro (15/09/22) está em atraso por mais de 100 dias. A notificação de débito inicial data de 20/09/22.
+
+2. Como já ocorreu o cancelamento automático no dia xxx/xxxx/xxxx, infelizmente não há mais como reativarmos o seu produto porque o processo de cancelamento é irreversível. Logo, não há mais como restabelecer o seu acesso de internet para este produto.
+
+3. Com isso, atualmente você possui em aberto as faturas de vencimento em setembro (15/09/22, de R$116,27), a de outubro (15/10/22, de R$116,27), a de novembro (15/11/22, de R$116,27), a de dezembro (15/12/22, de R$67,26) e a de janeiro (15/01/23, de R$15,00). Estas são suas últimas faturas.
+
+4. Para sua comodidade, recomendamos que você efetue a negociação dos valores com melhores condições de acordo através do nosso site TIM Negocia www.timnegocia.com.br ou da central de cobrança 0800 888 2373. Também ficamos à disposição no número 103 41.
+
+5. As restrições que podem ser aplicadas à banda larga em caso de inadimplência estão descritas na cláusula nona do Contrato de Prestação de Serviços. Você pode consultar o regulamento do seu plano e o contrato de prestação de serviços ao acessar o site www.tim.com.br.
+
+
+O número do protocolo deste registro é: xxxxx.
+
+Em caso de dúvidas, nos colocamos à disposição em caso de novas solicitações através do atendimentotecnicotimlive@timbrasil.com.br e também na nossa Ouvidoria 0800 882 0041 (de segunda à sexta das 08h às 18h).
+Realizamos contato sem sucesso no número xxxx em xxxx, às xxxx.
+    `,
+    'ligacoes': `
+Olá,  
+
+A TIM Ultrafibra gostaria de agradecer a oportunidade que você nos dá de esclarecermos e solucionarmos o ocorrido da melhor maneira possível.  
+
+Identificamos que não houve acionamento do consumidor nos canais de atendimento da Ouvidoria e 1° atendimento referente ao motivo de ligações inoportunas.
+
+Em atenção a sua manifestação Anatel xxxxxxx considerada procedente, onde foi relatado insatisfação em relação as ligações inoportunas e mensagens publicitárias.  
+
+Atendemos a solicitação e prosseguimos com o bloqueio do seu número (xx-xxxxxxxx) em nosso sistema no dia xx/xx/xxxx conforme solicitado. Inicialmente as ligações irão diminuir e no prazo de até 30 dias corridos você deixará de receber esse tipo de contato, contando a partir da data de bloqueio.
+
+Nós levamos a sério a privacidade e os dados pessoais de nossos clientes. Entendemos que nosso dever é proteger e ser transparente sobre o uso das informações. Desde a aprovação da Lei n.13.709/18, a Lei Geral de Proteção de Dados Pessoais (“LGPD”), buscamos tornar esse compromisso não só um cumprimento da lei, mas também parte da nossa cultura, e não identificamos vazamentos de seus dados por parte da TIM.  
+
+Esclarecemos que todos os parceiros de telemarketing da TIM cumprem a regulamentação, nosso número oficial de vendas começa com 0303. Existem empresas ligando a partir de outros números e se passando pela TIM, porém não autorizamos esta prática e respeitamos seu cadastro no Não Perturbe. Os contatos realizados pelo número não oficial são indevidos e a TIM procederá com uma investigação para identificar a empresa ofensora.  
+
+Se deseja mais esclarecimentos pode acionar nosso Canal Tolerância Zero – WhatsApp 114280-9375 – Exclusivo para registrar as ligações inoportuna.
+
+Reiteramos a importância da atualização e cadastro no site homologado pela ANATEL para bloqueio de ligações de telemarketing: https://www.naomeperturbe.com.br.
+
+Antes de finalizar/avaliar nossa resposta, caso tenha dúvidas sobre o tratamento de sua demanda, pedimos que faça uma interação através do e-mail atendimentotecnicotimlive@timbrasil.com.br com seu CPF, que faremos um novo contato para sanar todas as dúvidas.    
+
+Caso queira consultar o regulamento de planos e serviços, acesse o site da TIM (https://site.tim.com.br).  
+
+Aproveitamos a oportunidade para informar que a TIM criou um canal de Ouvidoria, específico para atendimento em 2ª instância para prestar assistência a clientes que não tiveram sua solicitação atendida em nossos canais de atendimento. O canal está disponível de segunda a sexta-feira das 08:00 às 18:00 horas (Exceto feriados nacionais) através do número 08008820041.  
+
+Sua tratativa foi registrada em nosso sistema com o protocolo xxxxxxxxxxx.  
+
+Agradeço a oportunidade de esclarecer os fatos relatados e me coloco à disposição.
+    `,
+    'fraude': `
+Suspensão FR Prevenção:
+
+xxxxx,
+Sobre a sua reclamação de problemas com a banda larga fixa, de caráter procedente:
+
+1. Fizemos a análise do produto de banda larga fixa xxxxx e verificamos que a sua banda larga foi suspensa de forma preventiva pelo nosso departamento de Administração de Clientes da TIM Ultrafibra no dia xx/xxx. Isto normalmente ocorre quando este setor identifica alguma suspeita de ativação indevida.
+
+2. Como explicado, para desbloquear o produto, há a necessidade de enviar para o e-mail admlive@timbrasil.com.br cópia do seu RG, CPF, comprovante de endereço com um número válido para contato. A análise é feita em cerca de 24h.
+
+3. Após o envio e confirmação positiva da documentação pela área de Administração de Clientes, identificamos que houve o desbloqueio sistêmico do seu produto em xx/xxx e, atualmente, sua conexão já consta restabelecida novamente.
+
+4. Você não será cobrado de mensalidade acerca do período de xxxx a xxxxxx em que o produto esteve suspenso.
+
+
+Gostaríamos de pedir desculpas pelos transtornos que foram causados a você, pela falta de clareza em detalhar o que estava acontecendo e por toda esta situação.
+O número do protocolo deste registro é: xxxxx.
+Em caso de dúvidas, nos colocamos à disposição em caso de novas solicitações através do atendimentotecnicotimlive@timbrasil.com.br e também na nossa Ouvidoria 0800 882 0041 (de segunda à sexta das 08h às 18h).
+
+Realizamos contato com sucesso no número xxxx no dia xxx/xxx
+Se quiser consultar o regulamento do seu plano, acesse www.tim.com.br
+
+
+
+Suspensão FR Reseller:
+
+xxxxx,
+Sobre a sua reclamação de problemas com a banda larga fixa, de caráter improcedente:
+
+1. Fizemos a análise do produto de banda larga fixa xxxxxxx e verificamos que, de fato, ocorreu a suspensão no dia xxxxxx, através do protocolo xxxxx e eventualmente ocorrerá também o cancelamento do produto pelo setor de Administração de Clientes da TIM por descumprimento das cláusulas contratuais 2.12. a 2.13. do contrato de prestação de serviços, relacionadas a consumo excessivo. A carta de notificação judicial sobre esse assunto consta enviada a partir de xxx/xxx, através do protocolo xxxxx.
+
+2. Como explicamos em contato com você, infelizmente não há como nós da central de atendimento impedirmos que o cancelamento do produto seja feito, tendo em vista que se trata de uma situação que está prevista no contrato.
+
+3. Nós compartilhamos com você via WhatsApp/E-mail o regulamento do seu plano e o contrato de prestação de serviços e reforçamos que esses documentos também estão sempre disponíveis no site oficial da TIM, www.tim.com.br para consulta. Reforçamos que o cancelamento do produto não gerará taxas ou multa para você e que a cobrança de mensalidade foi interrompida em xxx/xxx. (mesma data da suspensão do produto)
+
+
+O número do protocolo deste registro é: xxxxxx.
+Em caso de dúvidas, nos colocamos à disposição através do atendimentotecnicotimlive@timbrasil.com.br e também na nossa Ouvidoria 0800 882 0041 (de segunda à sexta das 08h às 18h).  
+Realizamos contato com sucesso no número xxxx no dia xxx/xxxx, às xxxxx.
+    `,
+
+        };
+        function obterResposta() {
+    const select = document.getElementById('tema');
+    const respostaTextarea = document.getElementById('resposta');
+    const opcaoSelecionada = select.value;
+    const linkTimX = document.getElementById('linkTimX'); // Seleciona o link do botão "Tim X"
+
+    respostaTextarea.value = respostas[opcaoSelecionada] || 'Opção não encontrada.';
+    
+    switch (opcaoSelecionada) {
+            case 'tentativa':
+            linkTimX.href = 'https://link-para-tentativa.com';
+            break;
+            case 'normalizado':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/36351';
+            break;
+            case 'areaderisco':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/62731';
+            break;
+            case 'massiva':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/55711';
+            break;
+            case 'cancelamento':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/55581';
+            break;
+            case 'trocadeplano':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/72801';
+            break;
+            case 'instalação':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/63881';
+            break;
+            case 'viabilidade':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/63881';
+            break;
+            case 'vas':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/15801';
+            break;
+            case 'meutim':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/15801';
+            break;
+            case 'atc':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/42806';
+            break;
+            case 'reclassificação':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/24856';
+            break;
+            case 'fechamento':
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/#/procedures/22021';
+            break;
+        // Adicione links para todas as outras opções
+        default:
+            linkTimX.href = 'https://timx.internal.timbrasil.com.br/';
+            }
+        }
+    </script>
+<body>
+
+
+
+   
+      <footer>
+        <p>&copy; Caio Evangelista Soares</p>
+        <p>&copy; Hosana Nascimento</p>
+      </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+  </html>
