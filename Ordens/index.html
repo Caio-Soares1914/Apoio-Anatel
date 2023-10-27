@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  
+
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JH5LTQ7VK9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JH5LTQ7VK9');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet">
+    
+    <style>
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container {
+        max-width: 90%;
+        margin-top: 50px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: center;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .form-group input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .form-group input[type="submit"]:hover {
+    background-color: #0f7e0f;
+  }
+
+  .form-group input[type="submit"]:focus {
+    outline: none;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 0px;
+    text-align: center;
+  }
+  .logo {
+    display: inline-block;
+    max-width: 80px;
+    height: auto;
+    margin: 10px;
+    text-align: relative;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  footer {
+  background: #333;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  }
+  
+
+
+nav {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+    </style>
+    <title>Ordens</title>
+</head>
+<header>
+    <h1>Apoio Anatel</h1>
+    <img class="logo" src="img/timlogo.png" alt="Logo do Site">
+    <img class="logo" src="img/anatell.png" alt="Logo do Site">
+  </header>
+  <nav>
+    <ul>
+      <li><a href="https://calculadoraanatel.netlify.app/" target="_blank">Calculadora</a></li>
+      <li><a href="https://pesquisaanatel.netlify.app/" target="_blank">Controle pesquisa</a></li>
+      <li><a href="http://127.0.0.1:5500/Ordens/index.html" target="_blank">Controle de ordens</a></li> 
+      <li><a href="https://apoioanatel.netlify.app/" target="_blank">Inicio</a></li>
+      <li><a href="https://linksanatel.netlify.app/" target="_blank">Links</a></li>
+      <li><a href="https://respostasanatel.netlify.app/" target="_blank">Respostas</a></li>  
+  </nav>
+<body>
+    <div class="container">
+        <h2>Cadastro de ordens</h2>
+        <br><br>
+        <form action="https://api.sheetmonkey.io/form/7AUJ39YHMnZfrKEi9zXSYK" method="post">
+          <div class="form-group">
+            <label for="username">Protocolo Anatel:</label>
+            <input type="text" id="Protocolo" name="Protocolo" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Tipo de ordem:</label>
+            <input type="text" id="Tipo" name="Tipo" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Nº da ordem:</label>
+            <input type="text" id="Ordem" name="Ordem" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Consultor:</label>
+            <input type="text" id="Consultor" name="Consultor" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Data de criação:</label>
+            <input type="date" id="Criacao" name="Criaçao" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Data de agendamento:</label>
+            <input type="date" id="Data" name="Data" required>
+          </div>
+          <div class="form-group">
+            <label for="escalonado">Caso já escalonado?</label>
+            <input type="text" id="Escalonado" name="Escalonado" required>
+        </div>
+          <div class="form-group">
+            <input type="submit" value="Enviar">
+          </div>
+        </form>
+      </div>
+      <br><br><br><br>
+      <footer>
+        <p>&copy; Caio Evangelista Soares</p>
+        <p>&copy;  Hosana Nascimento</p>
+        <p>&copy;  Robson de Oliveira</p>
+      </footer>
+
+</body>
+</html>s
