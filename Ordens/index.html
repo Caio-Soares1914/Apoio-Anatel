@@ -159,9 +159,19 @@ nav {
             <input type="text" id="Protocolo" name="Protocolo" required>
           </div>
           <div class="form-group">
-            <label for="password">Tipo de ordem:</label>
-            <input type="text" id="Tipo" name="Tipo" required>
+            <label for="password">Data de vencimento?</label>
+            <input type="date" id="Vencimento" name="Data de vencimento?" required>
           </div>
+          <div class="form-group">
+            <label for="Tipo">Tipo de ordem:</label>
+            <select id="Tipo" name="Tipo" required>
+                <option value="ATC">ATC</option>
+                <option value="RST">RST</option>
+                <option value="OS">OS</option>
+                <option value="Pró ativo">Pró ativo</option>
+                <option value="Mudança de ponto/modem">Mudança de ponto/modem</option>
+            </select>
+        </div>
           <div class="form-group">
             <label for="password">Nº da ordem:</label>
             <input type="text" id="Ordem" name="Ordem" required>
@@ -171,17 +181,13 @@ nav {
             <input type="text" id="Consultor" name="Consultor" required>
           </div>
           <div class="form-group">
-            <label for="password">Data de criação:</label>
-            <input type="date" id="Criacao" name="Criaçao" required>
+            <label for="password">Data de abertura:</label>
+            <input type="date" id="Abertura" name="Data de abertura?" required>
           </div>
           <div class="form-group">
             <label for="password">Data de agendamento:</label>
-            <input type="date" id="Data" name="Data" required>
+            <input type="date" id="Data" name="Data de agendamento" required>
           </div>
-          <div class="form-group">
-            <label for="escalonado">Caso já escalonado?</label>
-            <input type="text" id="Escalonado" name="Escalonado" required>
-        </div>
           <div class="form-group">
             <input type="submit" value="Enviar">
           </div>
